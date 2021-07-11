@@ -3,23 +3,32 @@ import {hot} from 'react-hot-loader';
 import './style.css';
 
 let quotes = [{
-    text: "Let's go to Chandrapur",
-    author: "Vinith"
+    text: "The greatest glory in living lies not in never falling, but in rising every time we fall.",
+    author: "Nelson Mandela"
 }, {
-    text: "I want to play FIFA right now",
-    author: "Jojo"
+    text: "The way to get started is to quit talking and begin doing.",
+    author: "Walt Disney"
 }, {
-    text: "I just got a new job!",
-    author: "Vishal"
+    text: "Your time is limited, so don't waste it living someone else's life. Don't be trapped by dogma – which is living with the results of other people's thinking.",
+    author: "Steve Jobs"
 }, {
-    text: "Death by Chocolate is the best icecream in the world!",
-    author: "Onni"
+    text: "If life were predictable it would cease to be life, and be without flavor.",
+    author: "Eleanor Roosevelt"
 }, {
-    text: "Let's play Cricket",
-    author: "Titu"
+    text: "If you look at what you have in life, you'll always have more. If you look at what you don't have in life, you'll never have enough.",
+    author: "Oprah Winfrey"
+}, {
+    text: "If you set your goals ridiculously high and it's a failure, you will fail above everyone else's success",
+    author: "James Cameron"
+}, {
+    text: "Life is what happens when you're busy making other plans.",
+    author: "John Lennon"
+}, {
+    text: "It is during our darkest moments that we must focus to see the light.",
+    author : "Aristotle"
 }];
   
-export default class Quote extends React.Component{
+class Quote extends React.Component{
     constructor(props){
         super(props);
         this.state = {
@@ -64,11 +73,15 @@ export default class Quote extends React.Component{
         document.body.style.backgroundColor = '#' + this.state.bgc;
         return (
         <div id="quote-box" style={{color: "#" + this.state.bgc}}>
-            <h3 id="text">{this.state.quote}</h3>
-            <p id="author">-{this.state.author}</p>
-            <button id="new-quote" onClick={this.handleClick}>Next Quote</button>
-            <a target="_top" id="tweet-quote" href={`https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text= ${this.state.quote} - ${this.state.author}`}>Tweet</a>
+            <div className="textarea">
+                <h3 id="text">{this.state.quote}</h3>
+                <p id="author">-{this.state.author}</p>
+            </div>
+            <button id="new-quote" onClick={this.handleClick}><span>Next Quote</span></button>
+            <a target="_top" id="tweet-quote" href={`https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text= ${this.state.quote} - ${this.state.author}`}><img alt="Twitter Logo" src="https://upload.wikimedia.org/wikipedia/sco/9/9f/Twitter_bird_logo_2012.svg"/></a>            
         </div>
         );
     }
 };
+
+export default hot(module)(Quote)

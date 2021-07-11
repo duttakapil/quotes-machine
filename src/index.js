@@ -1,5 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Quote from './index.js';
+import Quote from './app.js';
 
 ReactDOM.render(<Quote/>, document.getElementById('root'));

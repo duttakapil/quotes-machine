@@ -1,18 +1,19 @@
 #root {
+  position : absolute;
+  height : 100%;
+  width : 100%;
+  left : 0;
+  top : 0;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 #quote-box {
   height : 10em;
-  width : 35em;
+  width : 50rem;
   font-size : 22px; 
   background-color: white;
-  position : absolute;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  margin : 0 auto;
   padding : 2em;
   display: flex;
   flex-direction: column;
@@ -30,11 +31,52 @@
 #new-quote {
   height : 2em;
   width: 10em;
-  background-color: white;
-  border-radius: 5%;
+  padding : 1rem;
+  border-radius: 10%;
+  position : absolute;
+  margin-bottom : -15rem;
+  display : flex;
+  align-items : center;
+  justify-content : center;
+}
+
+#new-quote span {
+  color : blue;
 }
 
 #tweet-quote {
-  margin-top : 20px;
-  padding : 2px;
+  /* max-height : 1rem;
+  width : 1rem; */
+  /* background-color : red; */
+  position : absolute;
+  margin-bottom : -15rem;
+  margin-left : -50rem;
+  padding : 2px;  
+}
+
+#tweet-quote img {
+  /* background-color : red; */
+  height : 3rem;
+  width : 3.5rem;
+  /* color : red; */
+}
+
+@media (max-width : 1000px) {
+  #quote-box {
+    /* background-color : red; */
+    font-size : 2.5rem;
+  }
+  #new-quote {
+    height : 8rem;
+    width : 25rem;
+    font-size : 3rem;
+    margin-bottom : -44rem;
+  }
+  #tweet-quote {
+    margin-bottom : -45rem;    
+  }
+  #tweet-quote img {
+    height : 5.5rem;
+    width : 7.5rem;
+  }
 }
