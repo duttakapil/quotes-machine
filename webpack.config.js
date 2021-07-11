@@ -28,9 +28,7 @@ module.exports = {
     },
     devServer : {
         contentBase : "./build",
-        // index : "index.html",
         port : 3001,
-        // publicPath : "/",
         hotOnly : true
     },
     plugins : [new webpack.HotModuleReplacementPlugin(), new HtmlWebpackPlugin({
